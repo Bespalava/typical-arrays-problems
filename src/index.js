@@ -1,8 +1,7 @@
 
 exports.min = function min (array) {  
     if (arguments.length === 0 || array.length === 0) return 0;
-    a = Math.min(array);
-    return a[0];
+    return array[0];
 }
 
 exports.max = function max (array) {
@@ -10,5 +9,6 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (arguments.length === 0 || array.length === 0) return 0;
+    return  array.reduce((all, one) => all + one, 0) / array.length;
 }
